@@ -22,12 +22,63 @@
     }
   }
 
+  @keyframes float3D {
+    0%, 100% {
+      transform: translateY(0px) rotateX(0deg);
+    }
+    50% {
+      transform: translateY(-6px) rotateX(4deg);
+    }
+  }
+
   .animate-neon {
     animation: neonGlow 2.5s infinite ease-in-out;
   }
 
   .animate-laser {
     animation: laserPulse 1.2s infinite ease-in-out;
+  }
+
+  .animate-float-3d {
+    animation: float3D 4s ease-in-out infinite;
+  }
+
+  /* 3D Depth Utilities */
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .translate-z-5 {
+    transform: translateZ(5px);
+  }
+
+  .translate-z-10 {
+    transform: translateZ(10px);
+  }
+
+  .translate-z-20 {
+    transform: translateZ(20px);
+  }
+
+  .translate-z-30 {
+    transform: translateZ(30px);
+  }
+
+  /* Cyberpunk Glass Card Styling */
+  .cyber-glass {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  /* Interactive Cyber Grid Background */
+  .bg-cyber-grid {
+    background-image: 
+      linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 }
 
